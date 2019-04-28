@@ -1,7 +1,7 @@
 properties([pipelineTriggers([githubPush()])])
 node('linux'){
     stage('Build'){
-       git 'https://github.com/chazteh/java-project.git'
+       git 'https://github.com/chazteh/java-project.git/'
        sh "ant -f build.xml -v"
     }
         
